@@ -56,6 +56,11 @@
 		379635D9256B116500D088A0 /* Uber */ = {
 			isa = PBXGroup;
 			children = (
+				379635F4256B11EA00D088A0 /* Model */,
+				379635F3256B11E600D088A0 /* View */,
+				379635F2256B11E400D088A0 /* Controller */,
+				379635F0256B11D900D088A0 /* Service */,
+				379635EF256B11C000D088A0 /* Utils */,
 				379635DA256B116500D088A0 /* AppDelegate.swift */,
 				379635DC256B116500D088A0 /* SceneDelegate.swift */,
 				379635DE256B116500D088A0 /* ViewController.swift */,
@@ -65,6 +70,41 @@
 				379635E8256B116600D088A0 /* Info.plist */,
 			);
 			path = Uber;
+			sourceTree = "<group>";
+		};
+		379635EF256B11C000D088A0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		379635F0256B11D900D088A0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		379635F2256B11E400D088A0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		379635F3256B11E600D088A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		379635F4256B11EA00D088A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
