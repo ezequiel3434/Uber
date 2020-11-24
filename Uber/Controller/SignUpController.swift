@@ -115,11 +115,25 @@ class SignUpController: UIViewController {
     @objc func handleSignUp() {
         guard let email = emailTextField.text else { return }
         guard let password = passwordTextField.text else { return }
+        guard let fullname = fullNameTextField.text else { return  }
+        let accountTypeIndex = accountTypeSegmentedControl.selectedSegmentIndex
         
-        print(email)
-        print(password)
-        
-//        Auth.auth().createUser(withEmail: email, password: password, completion: <#T##((AuthDataResult?, Error?) -> Void)?##((AuthDataResult?, Error?) -> Void)?##(AuthDataResult?, Error?) -> Void#>)
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("Failed to register user with error \(error.localizedDescription)")
+                return
+            }
+            
+            guard let uid = result?.user.uid else {return}
+            
+            let values = ["email": email,
+                          "fullname": fullname,
+                          "accountType": accountTypeIndex ] as [String : Any]
+            
+            Database.database().reference().child("users").child(uid).updateChildValues(values) { (error, ref) in
+                print("Succesfully registered user and saved data...")
+            }
+        }
     }
     
     
