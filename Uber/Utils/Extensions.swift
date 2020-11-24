@@ -92,6 +92,7 @@ extension UITextField {
         tf.font = UIFont.systemFont(ofSize: 16)
         tf.textColor = .white
         tf.keyboardAppearance = .dark
+        tf.textContentType = .oneTimeCode
         tf.isSecureTextEntry = isSecureTextEntry
         tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         return tf
