@@ -91,6 +91,7 @@ extension UITextField {
         tf.borderStyle = .none
         tf.font = UIFont.systemFont(ofSize: 16)
         tf.textColor = .white
+        tf.autocapitalizationType = .none
         tf.keyboardAppearance = .dark
         tf.textContentType = .oneTimeCode
         tf.isSecureTextEntry = isSecureTextEntry
